@@ -1,0 +1,21 @@
+MDScreen:
+    name : 'Profile'
+    MDFloatLayout:
+        MDTopAppBar:
+            title : "App Bar"
+            left_action_items : [["arrow-left",lambda x:app.show_main()]]
+            pos_hint : {'center_y':0.96}
+
+        MDIcon:
+            icon: "account-circle"
+            pos_hint: {"center_x": .5, "center_y": .8}
+            font_size: "60sp"
+
+        MDLabel:
+            id : user
+            font_style:'Subtitle1'
+            role:'small'
+            text:'User'
+            pos_hint:{'center_y':0.70}
+            halign:'center'
+            theme_text_color:'Primary'

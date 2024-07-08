@@ -1,0 +1,34 @@
+MDScreen:
+    name : 'Main'
+    MDFloatLayout:
+        MDTopAppBar:
+            title:"App Bar"
+            left_action_items : [["menu"]]
+            pos_hint: {'center_y':0.96}
+            right_action_items : [['account',lambda x: app.show_profile()]]
+
+        MDTextField:
+            id : index_button
+            hint_text: "Index"
+            mode: "round"
+            helper_text: "Index"
+            size_hint : 0.4,None
+            pos_hint: {'center_x':0.25,'center_y':0.80}
+            icon_left:"plus"
+            on_focus:if self.focus : app.open_menu()
+
+        MDTextField:
+            id : instrument
+            hint_text: "Instr.Type"
+            mode: "round"
+            size_hint : 0.4,None
+            helper_text: "InstrumentType"
+            pos_hint: {'center_x':0.75,'center_y':0.80}
+            icon_left:"plus"
+            on_focus:if self.focus : app.open_menu1()
+
+        BoxLayout:
+            id: list_container
+            orientation: 'vertical'
+            size_hint: 1, 0.7
+            pos_hint: {'center_x': 0.5, 'center_y': 0.35}
